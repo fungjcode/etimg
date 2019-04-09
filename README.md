@@ -30,6 +30,7 @@ $fileurl = 'http://c.etimg.net' . DS . $imgthumb;
 
 5. 后台登陆地址
 >  http://youweb.com/sysadminlogin
+>  默认用户名 sysadmin   密码 123456
 
 # 使用
 最后，如果有问题请到我的博客, https://www.fungj.com 和我联系。
