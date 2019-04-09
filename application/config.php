@@ -243,7 +243,7 @@ return [
 	// | 网站自定义配置
 	// +----------------------------------------------------------------------
 	'webconfig' => [
-		'moderatecontent_key' => '5729441bea1bfd46347e63e00ad85796', //moderatecontent_key
+		'moderatecontent_key' => 'key', //moderatecontent_key
 	],
 	//验证码
 	'captcha' => [
