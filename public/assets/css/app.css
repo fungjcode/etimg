@@ -1,0 +1,139 @@
+/* Write your styles */
+
+.foot {
+    background: #555;
+}
+
+.footfont {
+    padding-top: 3px;
+    color: #ffffff;
+}
+
+.imgup {
+    border-style: dotted;
+    color: #cfcfcf;
+}
+
+.imguplogo {
+    color: #55b255;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.imgbut {
+    padding-top: 15px;
+}
+
+.lzoom {
+    padding-bottom: 20px;
+}
+
+.itiele {
+    margin-top: -4.8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOADING  */
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    background-color: #67CF22;
+    margin: auto;
+    -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+    animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+
+
+.copyinput {
+    width: 350px;
+    height: 36px;
+    line-height: 36px;
+    background: #F5F7FA;
+    border: 1px solid #AAB8D4;
+    border-radius: 4px;
+    font-size: 0;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.copyinput input {
+    display: inline-block;
+    width: 77%;
+    height: 34px;
+    border: 0;
+    font-size: 14px;
+    color: #42455F;
+    text-indent: 5px;
+    background: #F5F6FA;
+}
+
+.copyinput span {
+    display: inline-block;
+    width: 23%;
+    color: #4A5FE2;
+    background: #CFDEFC;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+<footer class="am-topbar am-topbar-fixed-bottom foot">
+    <div class="am-container">
+        <div class="footfont">
+            <small>© 2018 Copyright By {$logo}  <br>本站禁止上传违反国家法律规的任何图片No pictures are allowed to be uploaded in violation of national laws and regulations. </small>
+        </div>
+    </div>
+</footer>
+<!--[if (gte IE 9)|!(IE)]><!-->
+{if condition="$webleave neq 'index'"}
+<script src="__PUBLIC__assets/js/ggjquery.min.js"></script>
+<script src="__PUBLIC__imgbox/jquery.imgbox.pack.js"></script>
+<script src="__PUBLIC__assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+$("a.zoom").imgbox({
+    'autoScale': true,
+    'zoomOpacity': true,
+    'hideOnOverlayClick': true,
+    'hideOnContentClick': true,
+    'alignment': 'center'
+});
+</script>
+<script>
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+    console.log(e);
+    alert("URL复制成功");
+});
+
+clipboard.on('error', function(e) {
+    console.log(e);
+    alert("URL复制失败");
+});
+</script>
+{else /}
+<script src="__PUBLIC__assets/js/jquery.min.js"></script>
+<script src="__PUBLIC__assets/js/amazeui.min.js"></script>
+{/if}
+<script src="__PUBLIC__assets/js/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?f4a91ea638af0900424451e42b9b8d13";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__PUBLIC__/assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->

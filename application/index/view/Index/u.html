@@ -1,0 +1,140 @@
+{include file="index/header" /}
+
+<body>
+    <div class="am-container">
+        <div class="am-alert am-alert-secondary">
+            <span class="am-icon-comment"></span> <small class="am-text-warning">请勿上传违反国家规定的图片，系统将会自动审核当前图片，若违反相关规定图片将被删除</small>
+        </div>
+    </div>
+    <!-- 中间部分 -->
+    <div class="am-container">
+        <!-- 第一部分 -->
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
+            <a class="zoom" title="{$dbinfo['filename']}" href="{:url('/')}{$dbinfo['loaclpath']}"><img src="{:url('/')}{$dbinfo['thumbpath']}" class="am-img-responsive" /></a>
+        </div>
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-6">
+            <table class="am-table am-table-striped am-table-hover">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr class="am-success">
+                        <td><small>文件名</small></td>
+                        <td><small>{$dbinfo['filename']}</small></td>
+                    </tr>
+                    <tr class="am-primary">
+                        <td><small>上传时间</small></td>
+                        <td><small>{$dbinfo['ctime']|date="Y-m-d H:i:s",###}</small></td>
+                    </tr>
+                    <tr class="am-success">
+                        <td><small>宽度</td>
+                        <td><small>{$dbinfo['width']} px</small></td>
+                    </tr>
+                    <tr class="am-primary">
+                        <td><small>高度</td>
+                        <td><small>{$dbinfo['height']} px</small></td>
+                    </tr>
+                    <tr class="am-success">
+                        <td><small>类型</td>
+                        <td><small>{$dbinfo['type']}</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 第一部分END -->
+    <div class="am-container">
+        <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+    </div>
+    <!-- 第二部分 -->
+    <div class="am-container">
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-success am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">本站图片连接</label>
+                    <input type="text" id="foo" class="am-form-field" value="{$localurl}">
+                    <button class="btn am-btn am-btn-success am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo">复制</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="am-container">
+        <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+    </div>
+    <div class="am-container">
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-error am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">原图连接</label>
+                    <input type="text" id="foo1" class="am-form-field" value="{$imgurl}">
+                    <button class="btn am-btn am-btn-danger am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo1">复制</button>
+                </div>
+            </div>
+        </div>
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-error am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">缩略图连接</label>
+                    <input type="text" id="foo7" class="am-form-field" value="{$thumbimgurl}">
+                    <button class="btn am-btn am-btn-danger am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo7">复制</button>
+                </div>
+            </div>
+        </div>
+        <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-success am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">原图HTML代码</label>
+                    <input type="text" id="foo2" class="am-form-field" value="&lt;a href=&quot;{$imgurl}&quot;&gt;&lt;img src=&quot;{$imgurl}&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;">
+                    <button class="btn am-btn am-btn-success am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo2">复制</button>
+                </div>
+            </div>
+        </div>
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-success am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">缩略图HTML代码</label>
+                    <input type="text" id="foo3" class="am-form-field" value="&lt;a href=&quot;{$thumbimgurl}&quot;&gt;&lt;img src=&quot;{$thumbimgurl}&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;">
+                    <button class="btn am-btn am-btn-success am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo3">复制</button>
+                </div>
+            </div>
+        </div>
+        <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-warning am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">BBS CODE代码</label>
+                    <input type="text" id="foo4" class="am-form-field" value="[url={$localurl}][img]{$imgurl}[/img][/url]">
+                    <button class="btn am-btn am-btn-warning am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo4">复制</button>
+                </div>
+            </div>
+        </div>
+        <hr data-am-widget="divider" style="" class="am-divider am-divider-dotted" />
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-secondary am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">原图Markdown代码</label>
+                    <input type="text" id="foo5" class="am-form-field" value="![{$dbinfo['filename']}]({$imgurl})">
+                    <button class="btn am-btn am-btn-default am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo5">复制</button>
+                </div>
+            </div>
+        </div>
+        <div class="am-u-sm-12">
+            <div class="am-form">
+                <div class="am-form-group am-form-secondary am-form-icon am-form-feedback">
+                    <label class="am-form-label" for="doc-ipt-success">缩略图Markdown代码</label>
+                    <input type="text" id="foo6" class="am-form-field" value="![{$dbinfo['filename']}]({$thumbimgurl})">
+                    <button class="btn am-btn am-btn-default am-btn-xs" data-clipboard-action="copy" data-clipboard-target="#foo6">复制</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- 第二部分END -->
+    <!-- 中间部分END -->
+    {include file="index/footer" /}
+</body>
+
+</html>

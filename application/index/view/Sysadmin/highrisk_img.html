@@ -1,0 +1,21 @@
+{include file="sysadmin/header" /} {include file="sysadmin/sidebar" /}
+<!-- content start -->
+<div class="admin-content">
+    <div class="am-g" style="padding-top: 20px;padding-bottom: 20px;">
+        {volist name='list' id='img'}
+        <div class="am-u-sm-6 am-u-md-6 am-u-lg-3">
+            <div class="am-u-sm-12">
+                <a title="{$img['filename']}" href="{:url('/')}{$img['loaclpath']}"><img src="{:url('/')}{$img['thumbpath']}" class="am-img-responsive" /></a>
+            </div>
+            <div class="am-u-sm-6 itiele">
+                <a class="am-badge am-badge-secondary am-radius" href="/index/sysadmin/delimg/imgid/{$img['imgurl']}">图片删除</a>
+            </div>
+            <div class="am-u-sm-6 itiele">
+                <a class="am-badge am-badge-secondary am-radius" href="/index/sysadmin/reimglv/imgid/{$img['imgurl']}">图片恢复</a>
+            </div>
+        </div>
+        {/volist}
+    </div>
+    <small><ul class="am-pagination am-pagination-centered">
+            {$page}
+        </ul></small> {include file="sysadmin/footer" /}

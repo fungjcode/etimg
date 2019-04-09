@@ -1,0 +1,31 @@
+{include file="index/header" /}
+
+<body>
+    <!-- 中间 -->
+    <div class="am-container">
+        <div class="am-alert am-alert-secondary">
+            <span class="am-icon-comment"></span> <small class="am-text-warning">点击图片查看原图详细信息</small>
+        </div>
+    </div>
+    <div class="am-container" data-am-scrollspy="{animation: 'fade'}">
+        {volist name='list' id='img'}
+        <div class="am-u-sm-6 am-u-md-6 am-u-lg-3 lzoom">
+            <div class="am-u-sm-12">
+                <a title="{$img['filename']}" target="_blank" href="u/{$img.imgurl}.html"><img src="{:url('/')}{$img['thumbpath']}" class="am-img-responsive" /></a>
+            </div>
+        </div>
+        {/volist}
+    </div>
+    <div class="am-container">
+        <small><ul class="am-pagination am-pagination-centered">
+            {$page}
+        </ul></small>
+    </div>
+    <br />
+    <br />
+    <br />
+    <!-- 中间END -->
+    {include file="index/footer" /}
+</body>
+
+</html>

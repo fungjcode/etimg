@@ -1,0 +1,32 @@
+{include file="index/header" /}
+
+<body>
+    <!-- 中间公告 -->
+    <div class="am-container">
+        <div class="am-alert am-alert-secondary">
+            <span class="am-icon-comment"></span> <small class="am-text-warning">{$notice}</small>
+        </div>
+    </div>
+    <!-- 中间公告END -->
+    <!-- 图片上传 -->
+    <div class="am-container">
+        <form class="am-form" name="upimg" action="{:url('/i')}" enctype="multipart/form-data" method="post">
+            <div class="imgup am-text-center">
+                <div class="am-form-group am-form-file imguplogo">
+                    <i class="am-icon-cloud-upload am-icon-lg"></i>
+                    <br>
+                    <span><small>选择要上传的文件<br />Chrome可以直接拖拽文件到此处上传</small></span>
+                    <input id="doc-form-file" type="file" name="image" multiple>
+                    <div id="file-list">
+                    </div>
+                </div>
+            </div>
+            <div id="list" class="imgbut">
+            </div>
+        </form>
+    </div>
+    <!-- 图片上传END -->
+    {include file="index/footer" /}
+</body>
+
+</html>

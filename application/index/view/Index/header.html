@@ -1,0 +1,58 @@
+<!-- 导航条 -->
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{$description}">
+    <meta name="keywords" content="{$keywords}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{$webname} - {$description}</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="__PUBLIC__assets/i/favicon.png">
+    <link rel="stylesheet" href="__PUBLIC__assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__PUBLIC__assets/css/app.css">
+    <link rel="stylesheet" href="__PUBLIC__imgbox/imgbox.css">
+</head>
+<header class="am-topbar am-topbar-inverse">
+    <div class="am-container">
+        <h1 class="am-topbar-brand">
+    <a href="/">{$logo}</a>
+  </h1>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+        <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                {if condition="$webleave eq 'index'"}
+                <li class="am-active"><a href="/">首页</a></li>
+                <li><a href="/l">随便看看</a></li>
+                <li><a href="/about">关于我们</a></li>
+                {elseif condition="$webleave eq 'u'" /}
+                <li><a href="/">首页</a></li>
+                <li class="am-active"><a href="/l">随便看看</a></li>
+                <li><a href="/about">关于我们</a></li>
+                {elseif condition="$webleave eq 'about'" /}
+                <li><a href="/">首页</a></li>
+                <li><a href="/l">随便看看</a></li>
+                <li class="am-active"><a href="/about">关于我们</a></li>
+                {else /}
+                <li><a href="/">首页</a></li>
+                <li><a href="/l">随便看看</a></li>
+                <li><a href="/about">关于我们</a></li>
+                {/if}
+            </ul>
+            <!--
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">注册</button>
+            </div>
+            <div class="am-topbar-right">
+                <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm">登录</button>
+            </div>
+             -->
+        </div>
+    </div>
+</header>
+<!-- 导航END -->
